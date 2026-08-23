@@ -1,5 +1,7 @@
 # StudentSelect: Data Pipeline & Shortlisting UI
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://goelvibhore06-recruitment-manager--app-fdln7b.streamlit.app/)
+
 A production-minded Streamlit web interface designed to upload raw student datasets, automatically clean the data, and dynamically filter candidates for administrative shortlisting.
 
 ## 🚀 Core Features
@@ -8,6 +10,14 @@ A production-minded Streamlit web interface designed to upload raw student datas
 * **Interactive Status Management:** Toggle students as "Active" or "Debarred" in real-time. Debarred students are instantly excluded from the live shortlist and minimum score queries without needing to re-upload the dataset.
 * **Dynamic Filtering & Export:** Set a minimum total score requirement to generate a live shortlist. The app displays summary statistics (matched count, average scores) and allows you to export the final filtered list as a clean CSV.
 * **Privacy & Safety:** Processing happens entirely in application memory. Exported CSVs neutralize text beginning with spreadsheet formula characters for secure downloads.
+
+## 🎥 Live App & Video Demonstration
+
+**Test the application instantly in your browser:**
+👉 **[Launch Live Streamlit App](https://goelvibhore06-recruitment-manager--app-fdln7b.streamlit.app/)**
+
+*(Add your maximum 90-second video demo here showing: data upload, viewing the cleaned table, applying the minimum score filter, and downloading the CSV.)*
+[**Link to Video Demo**] 
 
 ## 🧹 Dataset Schema & Cleaning Logic
 
