@@ -14,7 +14,7 @@
 <p>
   <a href="https://goelvibhore06-recruitment-manager--app-fdln7b.streamlit.app/"><strong>🚀 Launch Live App</strong></a>
   &nbsp;·&nbsp;
-  <a href="#-demo">🎥 Watch Demo</a>
+  <a href="https://youtu.be/kwN6WMKfo2E">🎥 Watch Demo</a>
   &nbsp;·&nbsp;
   <a href="#-dataset-schema">📋 Dataset Schema</a>
 </p>
@@ -42,10 +42,10 @@ Set a minimum score threshold to generate a live, filtered shortlist. Summary st
 All processing happens in application memory. Exported files are sanitized against formula-injection characters for safe, secure downloads.
 
 ## 🎥 Demo
+Check out this small demo that i made covering the basic functionalities and use cases of this project
 
-*Add a short (≤90s) walkthrough here covering: uploading data, reviewing the cleaned table, applying a minimum score filter, and exporting the shortlist.*
 
-> 📺 **[Watch the demo](#)**
+<a href="https://youtu.be/kwN6WMKfo2E">🎥 Watch Demo</a>
 
 ## 📋 Dataset Schema
 
