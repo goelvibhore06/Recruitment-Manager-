@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # StudentSelect
 
 A production-minded Streamlit dashboard for cleaning raw student-score CSV files, reviewing the cleaned data, managing a student's active/debarred status in real time, and exporting an eligible shortlist.
@@ -119,3 +120,6 @@ data/sample_students.csv Safe built-in demo data
 ## Important note
 
 This app supports administrative shortlisting, not automated admissions decisions. Use the cleaned data and eligibility setting as a review tool, and retain an appropriate human decision process.
+=======
+# Recruitment-Manager-
+>>>>>>> b180b368a7481892bc55e3bb781169e8a96ede55
