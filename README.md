@@ -1,11 +1,36 @@
-Here is a completely restructured and polished README.md for your repository. It improves readability, highlights the core requirements from your technical assessment, and uses clean formatting for a professional presentation.  As requested, I have left a placeholder for the video demo.StudentSelect: Data Pipeline & Shortlisting UIA production-minded Streamlit web interface designed to upload raw student datasets, automatically clean the data, and dynamically filter candidates for administrative shortlisting.  🚀 Core FeaturesData Upload & Auto-Cleaning: Upload raw CSV files into an automated pipeline that instantly handles duplicates, typos, missing values, and validates/recalculates the Total score column.  Interactive Status Management: Toggle students as "Active" or "Debarred" in real-time. Debarred students are instantly excluded from the live shortlist and minimum score queries without needing to re-upload the dataset.  Dynamic Filtering & Export: Set a minimum total score requirement to generate a live shortlist. The app displays summary statistics (matched count, average scores) and allows you to export the final filtered list as a clean CSV.  Privacy & Safety: Processing happens entirely in application memory. Exported CSVs neutralize text beginning with spreadsheet formula characters for secure downloads.🧹 Dataset Schema & Cleaning LogicThe app expects a CSV with the following columns: Name, Gender, Grade, Math, Science, English, Total.  The auto-cleaning pipeline applies the following logic:  SituationHandling RuleMixed casing, whitespaceStandardized (e.g., "ROHAN" becomes "Rohan").Gender & Grade variantsMaps variants (M, 1) to "Male", (F, 0) to "Female". Grades standardize to "Grade X".Missing / Invalid ScoresReplaced with the valid-file median for that subject (or 0 if no valid values exist).  Total ColumnAlways recalculated precisely as Math + Science + English.  Exact DuplicatesRemoves repeated records after standardizing demographic fields and scores.  (Note: An audit panel in the UI exposes exactly what changed during cleaning so the process remains transparent.)💻 Running the App LocallyPrerequisites: Python 3.10 or newer installed on your machine.Open your terminal and clone/navigate to this project folder.Create and activate a virtual environment:Bash# macOS / Linux
-python3 -m venv .venv
-source .venv/bin/activate
+# StudentSelect: Data Pipeline & Shortlisting UI
 
-# Windows PowerShell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-Install dependencies and launch the app:Bashpython -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-python -m streamlit run app.py
-View the app: Open the local address printed in your terminal (usually http://localhost:8501). You can upload your own CSV or click "Load example data" in the sidebar.🧪 Testing & DeploymentRun Tests: Execute pytest -q in your terminal to run the test suite covering normalization, recalculation, invalid-score repairs, and schema validation.Cloud Deployment: This app is fully compatible with Streamlit Community Cloud. Simply push the repository to GitHub, link it to share.streamlit.io, and point it to app.py.  🎥 Video Demonstration(Add your maximum 90-second video demo here showing: data upload, viewing the cleaned table, applying the minimum score filter, and downloading the CSV.)  [Link to Video Demo]Disclaimer: This application is built as an administrative tool to assist with shortlisting candidates. It is highly recommended to retain a human review process for final admissions decisions.
+A production-minded Streamlit web interface designed to upload raw student datasets, automatically clean the data, and dynamically filter candidates for administrative shortlisting.
+
+## 🚀 Core Features
+
+* **Data Upload & Auto-Cleaning:** Upload raw CSV files into an automated pipeline that instantly handles duplicates, typos, missing values, and validates/recalculates the Total score column.
+* **Interactive Status Management:** Toggle students as "Active" or "Debarred" in real-time. Debarred students are instantly excluded from the live shortlist and minimum score queries without needing to re-upload the dataset.
+* **Dynamic Filtering & Export:** Set a minimum total score requirement to generate a live shortlist. The app displays summary statistics (matched count, average scores) and allows you to export the final filtered list as a clean CSV.
+* **Privacy & Safety:** Processing happens entirely in application memory. Exported CSVs neutralize text beginning with spreadsheet formula characters for secure downloads.
+
+## 🧹 Dataset Schema & Cleaning Logic
+
+The app expects a CSV with the following columns: **Name, Gender, Grade, Math, Science, English, Total**. 
+
+The auto-cleaning pipeline applies the following logic:
+
+* **Mixed casing & whitespace:** Standardized (e.g., "ROHAN" becomes "Rohan").
+* **Gender & Grade variants:** Maps variants to standard formatting (e.g., M to "Male", 11 to "Grade 11").
+* **Missing or Invalid Scores:** Replaced with the valid-file median for that subject (or 0 if no valid values exist).
+* **Total Column:** Always recalculated precisely as *Math + Science + English*.
+* **Exact Duplicates:** Removes repeated records after standardizing demographic fields and scores.
+
+*(Note: An audit panel in the UI exposes exactly what changed during cleaning so the process remains transparent.)*
+
+## 💻 Running the App Locally
+
+**Prerequisites:** Python 3.10 or newer installed on your machine.
+
+1. **Open your terminal** and clone/navigate to this project folder.
+2. **Create and activate a virtual environment:**
+
+   **For macOS / Linux:**
+   ```bash
+   python3 -m venv .venv
+   source .venv/bin/activate
